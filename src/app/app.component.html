@@ -2,5 +2,12 @@
   <app-header></app-header>
   <h2>Welcome to {{ title }}</h2>
   <p>This is my first Angular app and I hope I can be {{ message }}. I am excited to learn more about it</p>
+  <img src="{{imgURL}}" />
+  <img [src]=imgURL />
   <app-navbar></app-navbar>
+</div>
+
+<div>
+  <button disabled="{{isDisabled}}">Disabled</button>
+  <button [disabled]="isDisabled">Binded Disabled</button>
 </div>

@@ -13,4 +13,6 @@ import { HeaderComponent } from './header/header.component';
 export class AppComponent {
   title = 'AngularBasics';
   message = 'Learning to love Angular'
+  imgURL: string = 'https://aws-starter-bucket123.s3.amazonaws.com/jif-u-can-posts-urls/seedgraphic6.jpeg'
+  isDisabled: boolean = true;
 }
