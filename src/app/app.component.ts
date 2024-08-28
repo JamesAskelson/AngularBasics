@@ -14,5 +14,21 @@ export class AppComponent {
   title = 'AngularBasics';
   message = 'Learning to love Angular'
   imgURL: string = 'https://aws-starter-bucket123.s3.amazonaws.com/jif-u-can-posts-urls/seedgraphic6.jpeg'
-  isDisabled: boolean = true;
+  isDisabled: boolean = false;
+  isActive: boolean = true;
+
+  buttonClick(){
+    console.log('Button click')
+  }
+
+  keyEnter(event:any){
+    console.log(event.keyCode)
+    if(event.keyCode == 13){
+      console.log('Enter Key Press')
+    }
+  }
+
+  keyUpFiltering(user:HTMLInputElement){
+    console.log(user.id)
+  }
 }

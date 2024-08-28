@@ -11,3 +11,19 @@
   <button disabled="{{isDisabled}}">Disabled</button>
   <button [disabled]="isDisabled">Binded Disabled</button>
 </div>
+
+
+<!-- css binding -->
+
+<button [class.active]="isActive" [class.no-active]="!isActive">class</button>
+
+
+<!-- Event binding -->
+
+<button (click)="buttonClick()">Click me</button>
+
+<input type="text" (keyup)="keyEnter($event)">
+
+<!-- <input type="text" (keyup.a)="keyUpFiltering()"> -->
+
+<input type="text" (keyup.enter)="keyUpFiltering(user)" #user id="userInput">
