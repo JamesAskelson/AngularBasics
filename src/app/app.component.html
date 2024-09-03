@@ -9,7 +9,7 @@
 
 <div>
   <button disabled="{{isDisabled}}">Disabled</button>
-  <button [disabled]="isDisabled">Binded Disabled</button>
+  <button [disabled]=!isDisabled>Binded Disabled</button>
 </div>
 
 
@@ -19,6 +19,7 @@
 
 
 <!-- Event binding -->
+<!-- Can create functions in the app class that can be called as events for components on the page -->
 
 <button (click)="buttonClick()">Click me</button>
 
@@ -27,3 +28,14 @@
 <!-- <input type="text" (keyup.a)="keyUpFiltering()"> -->
 
 <input type="text" (keyup.enter)="keyUpFiltering(user)" #user id="userInput">
+
+<!-- two way data binding -->
+<!-- can set a variable to the app class and use it to set a default variable name for the input -->
+
+<!-- <input type="text" [value]='userName' #username (keyup.enter)="updateUserName(username)"> -->
+
+<!-- using ngModel with the FormModules import in the comp class, we can remove the #username and call the variable under the input if need be -->
+
+<input type="text" [(ngModel)]="userName">
+
+{{userName}}
